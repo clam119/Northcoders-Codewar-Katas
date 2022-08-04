@@ -94,3 +94,26 @@ function isSameLanguage(list) {
   return true;
 }
 ```
+
+# Challenge 4 - Sentence Smash
+### Link: https://www.codewars.com/kata/53dc23c68a0c93699800041d/
+
+### Challenge: 
+Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. **Be careful, there shouldn't be a space at the beginning or the end of the sentence!**
+
+For example, given the following input array:
+```JavaScript
+['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
+```
+
+### Solution:
+```JavaScript
+function smash (words) {
+   return words.join(" ").toString();
+};
+```
+
+### Notes:
+Reference: https://tinyurl.com/jsArrayToStringRef
+
+I broke this CodeWars Kata into manageable steps by first figuring out that you can convert an `Array` into a `String` using `toString();` and looked up how to replace the commas separating the words with a space, and finally returned this to the user.
