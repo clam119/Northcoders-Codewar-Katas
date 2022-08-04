@@ -109,11 +109,15 @@ For example, given the following input array:
 ### Solution:
 ```JavaScript
 function smash (words) {
-   return words.join(" ").toString();
+   return words.join(" ");
 };
 ```
 
 ### Notes:
-Reference: https://tinyurl.com/jsArrayToStringRef
+References:
+* https://tinyurl.com/jsArrayToStringRef
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
 
 I broke this CodeWars Kata into manageable steps by first figuring out that you can convert an `Array` into a `String` using `toString();` and looked up how to replace the commas separating the words with a space, and finally returned this to the user.
+
+Update: Refactored and removed `.toString();` because the `.join()` array method by default returns a string, and so there's no need to modify the data type that's being returned. 
