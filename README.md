@@ -221,18 +221,18 @@ The input string will only consist of lower case letters and/or spaces.
 ### Solution: 
 ```JavaScript
 function getCount(str) {
-  let count = 0;
-  const vowelsArray = ['a', 'e', 'i', 'o', 'u']
-    for (let i in str) {
-      if (str.split('')[i].includes(...vowelsArray)) {
-        count++;
+   let vowelCount = 0;
+
+   const vowelsArray = ['a', 'e', 'i', 'o', 'u'];
+   const strArray = str.split('');
+
+   strArray.forEach((el => {
+      for (let i in vowelsArray) {
+         if (el === vowelsArray[i]) {
+            vowelCount++;
+         }
       }
-    }
-  return count;
+   }));
+   return vowelCount;
 }
 ```
-### Notes:
-I broke down the problem by thinking about how I would check for vowels within a string and implement a counter for the amount of vowels within the string. 
-
-And so the solution that I found was to first create a separate array called `vowelsArray` and to iterate through the `str` by using the `.split('')` method to convert the string into an iteratable array, and if the item at `index[i]` includes any of the items within `vowelsArray` which uses the `... spread operator` then it will increment the count by 1.
-
