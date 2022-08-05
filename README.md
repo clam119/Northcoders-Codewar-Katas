@@ -207,3 +207,32 @@ function getAverage(marks){
 ```
 
 Reference: https://www.delftstack.com/howto/javascript/javascript-sum-of-array/
+
+# Challenge 8 - Vowel Count
+### Link https://www.codewars.com/kata/54ff3102c1bad923760001f3/
+
+### Challenge: 
+Return the number `(count)` of vowels in the given string.
+
+We will consider `a, e, i, o, u` as vowels for this Kata (but not y).
+
+The input string will only consist of lower case letters and/or spaces.
+
+### Solution: 
+```JavaScript
+function getCount(str) {
+  let count = 0;
+  const vowelsArray = ['a', 'e', 'i', 'o', 'u']
+    for (let i in str) {
+      if (str.split('')[i].includes(...vowelsArray)) {
+        count++;
+      }
+    }
+  return count;
+}
+```
+### Notes:
+I broke down the problem by thinking about how I would check for vowels within a string and implement a counter for the amount of vowels within the string. 
+
+And so the solution that I found was to first create a separate array called `vowelsArray` and to iterate through the `str` by using the `.split('')` method to convert the string into an iteratable array, and if the item at `index[i]` includes any of the items within `vowelsArray` which uses the `... spread operator` then it will increment the count by 1.
+
