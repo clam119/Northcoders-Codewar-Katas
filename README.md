@@ -448,3 +448,49 @@ function converter (mpg) {
   return parseFloat(kilometersPerLiter.toFixed(2));
 }
 ```
+
+# Challenge 18 - Driving School Series #1
+### Link: https://www.codewars.com/kata/58999425006ee3f97c00011f 
+
+### Challenge: 
+Every month, a random number of students take the driving test at Fast & Furious (F&F) Driving School. To pass the test, a student cannot accumulate more than 18 demerit points.
+
+At the end of the month, F&F wants to calculate the average demerit points accumulated by ONLY the students who have passed, rounded to the nearest integer.
+
+Write a function which would allow them to do so. If no students passed the test that month, return 'No pass scores registered.'.
+
+
+Example:
+
+`[10,10,10,18,20,20] --> 12`
+
+### Solution: 
+``` JavaScript
+function passed (list) { 
+
+  const passedStudents = [];
+  
+  for (let i in list) {
+    if (list[i] <= 18) {
+      passedStudents.push(list[i]);
+    }
+  }
+  
+  if (passedStudents.length === 0) {
+    return 'No pass scores registered.';
+  }
+  
+  let averageScore = passedStudents.reduce((a, b) => a + b, 0)
+	return Math.round(averageScore/passedStudents.length);
+} 
+```
+### Notes:
+This one was in hindsight a pretty simple challenge but getting the logic correct was a bit messy. 
+
+One thing I need to remind myself is how JavaScript is run from top-to-bottom and when a `return` is called then the function exits entirely not even going past the `return` call. 
+
+So for instance, if the `passedStudents` array length was 0 then it would return a string `No pass scores registered.` and then it'd exit out of the function. 
+
+But, given that there are passing scores, they would be pushed into the `passedStudents` array and then the `averageScore` which uses a `reduce` method to reduce it to a single sum.
+
+We then divide the `averageScore` by the length of the `passedStudents` array and then use the `Math.round()` method to round it to the closest integer and then return it.
