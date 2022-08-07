@@ -353,3 +353,21 @@ Reference:
 I've hardly touched Math methods since I've mostly been using string/array methods and so this challenge has showed me the `Math.sign()` method which depending on the parameter taken will return `1 - positive number`, `-1 - negative number`, `0 - positive zero`, `-0 negative zero`, and `NaN` if none of the cases match.
 
 So if the parameter that's being taken in `number` is a positive value then it will call the `-Math.abs()` method that returns the absolute value, and by default this returns a positive integer and so by adding a `-` hyphen, it inverses the operations and returns a negative value when a positive parameter is taken.
+
+# Challenge 14 - Even Or Odd
+### Link https://www.codewars.com/kata/53da3dbb4a5168369a0000fe
+
+### Challenge: 
+Create a function that takes an integer as an argument and returns `"Even"` for even numbers or `"Odd"` for odd numbers.
+
+### Solution: 
+```JavaScript
+function even_or_odd(number) {
+  if (number % 2 === 0) {
+    return 'Even'
+  } else {
+    return 'Odd';
+  }
+}
+```
+
