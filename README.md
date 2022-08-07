@@ -427,3 +427,24 @@ If you wanted to sort a string of words by the length, you can use the above `so
 
 For example; `str.sort((a-b) => a.length - b.length` - this will sort the string called `str` by the length of the strings in ascending order.
 
+# Challenge 17 - MPG to KPL  
+### Link https://www.codewars.com/kata/557b5e0bddf29d861400005d
+
+### Challenge: 
+Sometimes, I want to quickly be able to convert miles per imperial gallon into kilometers per liter.
+
+Create an application that will display the number of kilometers per liter (output) based on the number of miles per imperial gallon (input).
+
+Make sure to round off the result to two decimal points.
+
+Some useful associations relevant to this kata: 1 Imperial Gallon = 4.54609188 litres 1 Mile = 1.609344 kilometres
+
+### Solution: 
+```JavaScript
+function converter (mpg) {
+  // Calculate mpg to kpl
+  let kilometersPerLiter = mpg/4.54609188 *  1.609344
+  // Use the tofixed method to convert kpl to 2 decimal places & then use parseFloat to convert it from string to float 
+  return parseFloat(kilometersPerLiter.toFixed(2));
+}
+```
