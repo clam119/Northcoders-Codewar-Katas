@@ -390,3 +390,31 @@ function createArray(number){
   return newArray;
 }
 ```
+
+# Challenge 16 - Find Max/Min Values of List 
+### Link https://www.codewars.com/kata/577a98a6ae28071780000989/
+
+### Challenge: 
+
+### Solution:
+```JavaScript
+var min = function(list){
+    let minSortedList = list.sort((a, b) => a - b);
+    return minSortedList[0];
+}
+
+var max = function(list){
+    let maxSortedList = list. sort((a, b) => b - a);
+    return maxSortedList[0];
+}
+```
+### Notes
+
+Reference: https://www.youtube.com/watch?v=MWD-iKzR2c8 - Covers Array.sort() Higher Order Function
+
+A **higher order function** is a function that accepts and/or returns another function. The reason that the `sort( (a, b) => a - b)` is a **higher order function** is because it takes in parameters and returns its own functionality, in this case it's `a - b` for ascending orders or `b - a` for descending orders. 
+
+If you wanted to sort a string of words by the length, you can use the above `sort()` method and with the higher order function sorting it by `a-b` or `b-a` you can add methods such as `.length`. 
+
+For example; `str.sort((a-b) => a.length - b.length` - this will sort the string called `str` by the length of the strings in ascending order.
+
