@@ -323,3 +323,33 @@ function boolToWord( bool ){
   }
 }
 ```
+
+# Challenge 13 - Opposite number
+### Link https://www.codewars.com/kata/56dec885c54a926dcd001095
+
+### Challenge: 
+Very simple, given an integer or a floating-point number, find its opposite.
+
+Examples:
+```JavaScript
+1: -1
+14: -14
+-34: 34
+```
+### Solution: 
+```JavaScript
+function opposite(number) {
+  if (Math.sign(number) === 1 ) {
+      return -Math.abs(number);
+    } 
+  return Math.abs(number);
+}
+```
+Reference:
+* https://tinyurl.com/positiveToNegativeJS
+* https://tinyurl.com/mathSignJS
+
+### Notes:
+I've hardly touched Math methods since I've mostly been using string/array methods and so this challenge has showed me the `Math.sign()` method which depending on the parameter taken will return `1 - positive number`, `-1 - negative number`, `0 - positive zero`, `-0 negative zero`, and `NaN` if none of the cases match.
+
+So if the parameter that's being taken in `number` is a positive value then it will call the `-Math.abs()` method that returns the absolute value, and by default this returns a positive integer and so by adding a `-` hyphen, it inverses the operations and returns a negative value when a positive parameter is taken.
