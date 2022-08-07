@@ -265,3 +265,15 @@ function monkeyCount(n) {
   return numbersArray;
 }
 ```
+# Challenge 10 - Remove Space Strings
+### Link https://www.codewars.com/kata/57eae20f5500ad98e50002c5
+
+### Challenge: 
+Simple, remove the spaces from the string, then return the resultant string.
+
+### Solution: 
+```JavaScript
+function noSpace(x){
+  return x.split(" ").join('');
+}
+```
