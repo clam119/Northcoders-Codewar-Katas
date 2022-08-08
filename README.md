@@ -494,3 +494,30 @@ So for instance, if the `passedStudents` array length was 0 then it would return
 But, given that there are passing scores, they would be pushed into the `passedStudents` array and then the `averageScore` which uses a `reduce` method to reduce it to a single sum.
 
 We then divide the `averageScore` by the length of the `passedStudents` array and then use the `Math.round()` method to round it to the closest integer and then return it.
+
+  # Challenge 19 - A Needle In The Haystack
+  ### Link: https://www.codewars.com/kata/56676e8fabd2d1ff3000000c
+
+  ### Challenge: 
+Can you find the needle in the haystack?
+
+Write a `function findNeedle()` that takes an array full of junk but containing one `"needle"`
+
+After your function finds the needle it should return a message (as a string) that says:
+
+`"found the needle at position "` plus the index it found the needle, so:
+
+Example(Input --> Output)
+
+`["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"] --> "found the needle at position 5" `
+
+### Solution:
+```JavaScript
+function findNeedle(haystack) {
+  for (let i in haystack) {
+    if (haystack[i] === "needle") {
+      return "found the needle at position " + i;
+    }
+  }
+}
+```
