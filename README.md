@@ -521,3 +521,36 @@ function findNeedle(haystack) {
   }
 }
 ```
+
+  # Challenge 20 - Basic Data Types: Objects
+  ### Link: https://www.codewars.com/kata/571f1eb77e8954a812000837
+
+  ### Challenge: 
+In Javascript, Object is one of basic data types. Define an Object can use `var obj=new Object()` or `var obj={}`
+
+You can define the object attributes during initialization, like this: 
+
+`var animal={name:"dog"}`
+
+you can also set/get some properties after the object definition, like this:
+
+`var animal={}
+animal.name="dog"  (or animal["name"]="dog")`
+
+Give you a function animal, accept 1 parameter:obj like this:
+
+`{name:"dog",legs:4,color:"white"}`
+
+and return a string like this:
+
+`"This white dog has 4 legs."`
+
+### Solution: 
+```JavaScript
+function animal(obj){
+  return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
+}
+```
+
+### Notes: 
+A really simple challenge that just requires either the use of concatenation or template literals. I just completely forgot to add the "legs" part after `${obj.legs}` and so it was always returning for example: "This white dog has 4" - which was confusing because I forgot that the `legs` key:value was a number and so if I don't add "legs" at the end it wouldn't work. 
