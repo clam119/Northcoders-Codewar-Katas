@@ -554,3 +554,24 @@ function animal(obj){
 
 ### Notes: 
 A really simple challenge that just requires either the use of concatenation or template literals. I just completely forgot to add the "legs" part after `${obj.legs}` and so it was always returning for example: "This white dog has 4" - which was confusing because I forgot that the `legs` key:value was a number and so if I don't add "legs" at the end it wouldn't work. 
+
+# Challenge 21 - My head is at the wrong end!
+### Link: https://www.codewars.com/kata/56f699cd9400f5b7d8000b55
+
+### Challenge: 
+You're at the zoo... all the meerkats look weird. Something has gone terribly wrong - someone has gone and switched their heads and tails around!
+
+Save the animals by switching them back. You will be given an array which will have three values (tail, body, head). It is your job to re-arrange the array so that the animal is the right way round (head, body, tail).
+
+Same goes for all the other arrays/lists that you will get in the tests: you have to change the element positions with the same exact logics
+
+Simples!
+
+### Solution:
+```JavaScript
+function fixTheMeerkat(arr) {
+  const reversedArr = arr.reverse();
+  
+  return reversedArr;
+}
+```
