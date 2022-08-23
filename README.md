@@ -575,3 +575,30 @@ function fixTheMeerkat(arr) {
   return reversedArr;
 }
 ```
+
+# Challenge 22 - String Repeat
+### Link: https://www.codewars.com/kata/57a0e5c372292dd76d000d7e/
+
+### Challenge: 
+Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+
+Examples (input -> output)
+```JavaScript
+6, "I"     -> "IIIIII"
+5, "Hello" -> "HelloHelloHelloHelloHello"
+```
+
+### Solution 1 - Written As A Function:
+```JavaScript
+function repeatStr (n, s) {
+  return s.repeat(n);
+}
+```
+
+### Solution 2 - Assigning Function As Variable
+```JavaScript
+const repeatStr = (n, s) => s.repeat(n);
+```
+
+### Notes
+Solution 2 assigns the function to a variable so that it can be called separately instead of declaring it as a function. It takes in the two parameters similarly to the original `(n, s)` and then uses the arrow function and calls upon the `.repeat()` method. A `return` keyword is not required as it is implied. 
