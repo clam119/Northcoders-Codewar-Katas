@@ -602,3 +602,36 @@ const repeatStr = (n, s) => s.repeat(n);
 
 ### Notes
 Solution 2 assigns the function to a variable so that it can be called separately instead of declaring it as a function. It takes in the two parameters similarly to the original `(n, s)` and then uses the arrow function and calls upon the `.repeat()` method. A `return` keyword is not required as it is implied. 
+
+# Challenge 23 - Counting Sheep
+### Link: https://www.codewars.com/kata/54edbc7200b811e956000556
+
+### Challenge: 
+Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+
+For example:
+```JavaScript
+[true,  true,  true,  false,
+  true,  true,  true,  true ,
+  true,  false, true,  false,
+  true,  false, false, true ,
+  true,  true,  true,  true ,
+  false, false, true,  true]
+```
+The correct answer would be `17`.
+
+Hint: Don't forget to check for bad values like null/undefined
+
+### Solution 1 - Written As A Function:
+```JavaScript
+function countSheeps(arrayOfSheep) {
+  //Create a variable that counts the amount of "true" in arrayOfSheep
+  const numberOfSheep = arrayOfSheep.filter(sheep => sheep === true);
+  //Returns the number of "true" sheep
+  return numberOfSheep.length;
+}
+```
+### Solution 2 - Assigning Function As Variable
+```JavaScript
+const countSheeps = (arrayOfSheep) => arrayOfSheep.filter(sheep => sheep === true).length;
+```
